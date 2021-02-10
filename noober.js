@@ -87,7 +87,7 @@ for(let j=0; j< AllButtons.length; j++) {
     let button = AllButtons [j]
     console.log(button)
     console.log(j)
-  })
+  }
 }
 
 
