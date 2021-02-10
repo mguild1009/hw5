@@ -69,5 +69,189 @@ function renderRides(ridesArray) {
 
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
+
+//buttons
+
+let AllButtons = document.querySelectorAll('.filter-button')
+let allRidesButton = document.querySelector('#all-filter')
+let NooberPurpleButton = document.querySelector('#noober-purple-filter')
+let NooberPoolButton = document.querySelector('#noober-pool-filter')
+let NooberXLButton = document.querySelector('#noober-xl-filter')
+let NooberXButton = document.querySelector('#noober-x-filter')
+
+console.log(AllButtons)
+
+for(let j=0; j< AllButtons.length; j++) {
+  AllButtons[j].addEventListener('click', aync function(event) {
+
+    let button = AllButtons [j]
+    console.log(button)
+    console.log(j)
+  })
+}
+
+
+//when all rides is clicked
+allRidesButton.addEventListener('click', async function(event){
+event.preventDefault()
+
+//remove backround color of any previously clicked noober list
+  allRidesButton.classList.remove('bg-gray-300')
+  NooberPurpleButton.classList.remove('bg-gray-300')
+  NooberPoolButton.classList.remove('bg-gray-300')
+  NooberXLButton.classList.remove('bg-gray-300')
+  NooberXButton.classList.remove('bg-gray-300')
+
+  allRidesButtonclassList.add('bg-gray-300')
+
+  console.log('The All Rides button was clicked')
+  let output = document.querySelector('.rides')
+  output.innerHTML = ' '
+
+  //request the datea from our API
+  let url = 'https://kiei451.com/api/rides.json'
+  let response = await fetch(url)
+
+  renderRides(json)
+
 })
+
+// when Noober purple is pressed
+
+NooberPurpleButton.addEventListener('click',async function(event) {
+event.preventDefault()
+
+allRidesButton.classList.remove('bg-gray-300')
+NooberPurpleButton.classList.remove('bg-gray-300')
+NooberPoolButton.classList.remove('bg-gray-300')
+NooberXLButton.classList.remove('bg-gray-300')
+NooberXButton.classList.remove('bg-gray-300')
+
+NooberPurpleButton.add('bg-gray-300')
+console.log('The Noober Purple button was clicked')
+let output = document.querySelector('.rides')
+output.innerHTML = ' '
+
+  //request the datea from our API
+  let url = 'https://kiei451.com/api/rides.json'
+  let response = await fetch(url)
+  let json = await response.json()
+  const newArray = new Array()
+
+  for(let i=0; i<json.lenght; i++) {
+
+    let ride=json[i]
+let ServiceLevel= levelOfService(ride)
+
+if(ServiceLevel == "Noober Purple"){
+  newArray.push(ride) 
+    }
+  }
+renderRides(newArray)
+})
+
+// when Noober pool is pressed
+
+NooberPoolButton.addEventListener('click',async function(event) {
+  event.preventDefault()
+  
+  allRidesButton.classList.remove('bg-gray-300')
+  NooberPurpleButton.classList.remove('bg-gray-300')
+  NooberPoolButton.classList.remove('bg-gray-300')
+  NooberXLButton.classList.remove('bg-gray-300')
+  NooberXButton.classList.remove('bg-gray-300')
+  
+  NooberPoolButton.add('bg-gray-300')
+  console.log('The Noober Pool button was clicked')
+  let output = document.querySelector('.rides')
+  output.innerHTML = ' '
+  
+    //request the datea from our API
+    let url = 'https://kiei451.com/api/rides.json'
+    let response = await fetch(url)
+    let json = await response.json()
+    const newArray = new Array()
+  
+    for(let i=0; i<json.lenght; i++) {
+  
+      let ride=json[i]
+      let ServiceLevel= levelOfService(ride)
+  
+      if(ServiceLevel == "Noober Pool"){
+      newArray.push(ride) 
+      }
+    }
+    renderRides(newArray)
+// when Noober XL is pressed
+
+    NooberXLButton.addEventListener('click',async function(event) {
+      event.preventDefault()
+      
+      allRidesButton.classList.remove('bg-gray-300')
+      NooberPurpleButton.classList.remove('bg-gray-300')
+      NooberPoolButton.classList.remove('bg-gray-300')
+      NooberXLButton.classList.remove('bg-gray-300')
+      NooberXButton.classList.remove('bg-gray-300')
+      
+      NooberXLButton.add('bg-gray-300')
+      console.log('The Noober XL button was clicked')
+      let output = document.querySelector('.rides')
+      output.innerHTML = ' '
+      
+        //request the datea from our API
+        let url = 'https://kiei451.com/api/rides.json'
+        let response = await fetch(url)
+        let json = await response.json()
+        const newArray = new Array()
+      
+        for(let i=0; i<json.lenght; i++) {
+      
+          let ride=json[i]
+          let ServiceLevel= levelOfService(ride)
+      
+          if(ServiceLevel == "Noober XL"){
+          newArray.push(ride) 
+          }
+        }
+// Noober x is pressed
+
+    NooberXButton.addEventListener('click',async function(event) {
+      event.preventDefault()
+      
+      allRidesButton.classList.remove('bg-gray-300')
+      NooberPurpleButton.classList.remove('bg-gray-300')
+      NooberPoolButton.classList.remove('bg-gray-300')
+      NooberXLButton.classList.remove('bg-gray-300')
+      NooberXButton.classList.remove('bg-gray-300')
+      
+      NooberXButton.add('bg-gray-300')
+      console.log('The Noober X button was clicked')
+      let output = document.querySelector('.rides')
+      output.innerHTML = ' '
+      
+        //request the datea from our API
+        let url = 'https://kiei451.com/api/rides.json'
+        let response = await fetch(url)
+        let json = await response.json()
+        const newArray = new Array()
+      
+        for(let i=0; i<json.lenght; i++) {
+      
+          let ride=json[i]
+          let ServiceLevel= levelOfService(ride)
+      
+          if(ServiceLevel == "Noober X"){
+          newArray.push(ride) 
+          }
+        }
+
+        renderRides(newArray)
+      })
+
+
+    })
+  
+
+
+
 
