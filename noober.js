@@ -82,14 +82,13 @@ let NooberXButton = document.querySelector('#noober-x-filter')
 console.log(AllButtons)
 
 for(let j=0; j < AllButtons.length; j++) {
-  AllButtons[j].addEventListener ('click', aync function(event) {
+  AllButtons[j].addEventListener ('click', async function(event) {
 
     let button = AllButtons [j]
     console.log(button)
     console.log(j)
   })
 }
-
 
 //when all rides is clicked
 allRidesButton.addEventListener('click', async function(event){
@@ -250,8 +249,4 @@ NooberPoolButton.addEventListener('click',async function(event) {
 
 
     })
-  
-
-
-
-
+  }})
