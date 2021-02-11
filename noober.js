@@ -247,4 +247,4 @@ NooberPoolButton.addEventListener('click',async function(event) {
         renderRides(newArray)
       })
     })
-  }
+)}
