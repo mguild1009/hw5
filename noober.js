@@ -101,7 +101,7 @@ event.preventDefault()
   NooberXLButton.classList.remove('bg-gray-300')
   NooberXButton.classList.remove('bg-gray-300')
 
-  allRidesButtonclassList.add('bg-gray-300')
+  allRidesButton.classList.add('bg-gray-300')
 
   console.log('The All Rides button was clicked')
   let output = document.querySelector('.rides')
@@ -160,7 +160,7 @@ NooberPoolButton.addEventListener('click',async function(event) {
   NooberXLButton.classList.remove('bg-gray-300')
   NooberXButton.classList.remove('bg-gray-300')
   
-  NooberPoolButton.add('bg-gray-300')
+  NooberPoolButton.classList.add('bg-gray-300')
   console.log('The Noober Pool button was clicked')
   let output = document.querySelector('.rides')
   output.innerHTML = ' '
@@ -192,7 +192,7 @@ NooberPoolButton.addEventListener('click',async function(event) {
       NooberXLButton.classList.remove('bg-gray-300')
       NooberXButton.classList.remove('bg-gray-300')
       
-      NooberXLButton.add('bg-gray-300')
+      NooberXLButton.classList.add('bg-gray-300')
       console.log('The Noober XL button was clicked')
       let output = document.querySelector('.rides')
       output.innerHTML = ' '
@@ -223,7 +223,7 @@ NooberPoolButton.addEventListener('click',async function(event) {
       NooberXLButton.classList.remove('bg-gray-300')
       NooberXButton.classList.remove('bg-gray-300')
       
-      NooberXButton.add('bg-gray-300')
+      NooberXButton.classList.add('bg-gray-300')
       console.log('The Noober X button was clicked')
       let output = document.querySelector('.rides')
       output.innerHTML = ' '
@@ -247,4 +247,5 @@ NooberPoolButton.addEventListener('click',async function(event) {
         renderRides(newArray)
       })
     })
-)}
+})
+})
