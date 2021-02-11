@@ -78,6 +78,7 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
 let NooberPoolButton = document.querySelector('#noober-pool-filter')
 let NooberXLButton = document.querySelector('#noober-xl-filter')
 let NooberXButton = document.querySelector('#noober-x-filter')
+let json
 
 console.log(AllButtons)
 
@@ -126,7 +127,7 @@ NooberPoolButton.classList.remove('bg-gray-300')
 NooberXLButton.classList.remove('bg-gray-300')
 NooberXButton.classList.remove('bg-gray-300')
 
-NooberPurpleButton.add('bg-gray-300')
+NooberPurpleButton.classList.add('bg-gray-300')
 console.log('The Noober Purple button was clicked')
 let output = document.querySelector('.rides')
 output.innerHTML = ' '
