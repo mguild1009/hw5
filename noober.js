@@ -81,13 +81,13 @@ let NooberXButton = document.querySelector('#noober-x-filter')
 
 console.log(AllButtons)
 
-for(let j=0; j< AllButtons.length; j++) {
-  AllButtons[j].addEventListener('click', aync function(event) {
+for(let j=0; j < AllButtons.length; j++) {
+  AllButtons[j].addEventListener ('click', aync function(event) {
 
     let button = AllButtons [j]
     console.log(button)
     console.log(j)
-  }
+  })
 }
 
 
